@@ -1,4 +1,5 @@
 # UP210902_CPP
-hola mi nombre es karlo me gusta programar en c++ adios 
+Hola mi nombre es Karlo y me gusta programar
+
 
 ![no images](imagenes/zaca.jpeg)
