@@ -2,7 +2,9 @@
 Hola mi nombre es Karlo y me gusta programar
 ![no images](imagenes/zaca.jpeg)
 
-Topics
+T
+
+opics
 U1 Programming introduction
 U2 Control structures and cycles
 U3 Functions
