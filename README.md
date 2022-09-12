@@ -1,10 +1,9 @@
 # UP210902_CPP
 Hola mi nombre es Karlo y me gusta programar
+
 ![no images](imagenes/zaca.jpeg)
 
-T
-
-opics
+Topics
 U1 Programming introduction
 U2 Control structures and cycles
 U3 Functions
