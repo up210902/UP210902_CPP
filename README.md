@@ -1,6 +1,6 @@
 # UP210902_CPP
 
-Hola mi nombre es Karlo y me gutan los pitos negros bien grandes
+Hola mi nombre es Karlo y me gusta programar
 
 <div align="center" >
 
