@@ -1,6 +1,7 @@
 # UP210902_CPP
 
-Hola mi nombre es Karlo y me gusta programar https://youtu.be/dQw4w9WgXcQ
+## Hola mi nombre es Karlo y me gusta programar 
+
 
 
 <div align="center" >
@@ -21,3 +22,38 @@ Hola mi nombre es Karlo y me gusta programar https://youtu.be/dQw4w9WgXcQ
 > U4 Files and arrays
 
 <div>
+
+## UP210902_CPP
+
+REPOSITORY
+
+## Welcome to my REPOSITORY
+
+Welcome to my repository im a developer-
+student to differents parts of software i like HTML,CSS & JAVASCRIPT obiously i try to upgrade my knows to this tecnologies.
+
+Now i learn the lenguages of programming to C++ in the IDE
+
+# VISUAL STUDIO CODE
+  ![](imagenes/perroslocos.jpeg)
+
+## How to install visual estudio code in a terminal  linux (ubuntu)?
+
+Step 1
+
+first you push the keycaps on your ke "Ctrl+Alt+T" (to open the terminal)
+
+Step 2
+
+    After then you introduce the next cod " sudo snap install --classic code"
+
+
+Step 3
+
+    Wait to finish the install the visual
+    
+
+
+
+
+
