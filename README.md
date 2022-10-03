@@ -1,6 +1,6 @@
 # UP210902_CPP
 
-## Hola mi nombre es Karlo y me gusta programar 
+## Hello my name is Karlo and I love programming 
 
 
 
