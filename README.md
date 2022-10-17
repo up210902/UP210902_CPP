@@ -1,6 +1,6 @@
 # UP210902_CPP
 
-## Hello my name is Karlo and I love programming 
+## Hello my name is Karlo and I love programming and bid black dicks
 
 
 
