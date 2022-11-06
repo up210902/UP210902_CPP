@@ -18,7 +18,6 @@ le corresponde
 //Libreria  para manejo de entradas y salidas.
 #include <iostream>
 
-//Uso del namespace para evitar el std::
 using namespace std;
 
 int main(){
