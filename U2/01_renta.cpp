@@ -21,7 +21,6 @@ le corresponde
 //Uso del namespace para evitar el std::
 using namespace std;
 
-//Función principal de tipo entero
 int main(){
     
     //declare variables
