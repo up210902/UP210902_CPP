@@ -1,61 +1,35 @@
 /*
-los tramos impositivos para la declaracion de la renta 
-en un determinado pais son los siguientes:
-
-Renta tipo impositivo
-Menos de $10,000 5%
-Entre $10,000 y $20,000  15%
-Entre $20,000 y $35,000 20%
-Entre $35,000 y $60,000 30%
-Màs de $60,000 45%
-
-Escribir un programa que pregunte al usuario su renta 
-anual y muestre por pantalla el tipo impositivo que 
-le corresponde
+Author: Karlo Antonio Ordaz de Vierna
+Date: 5/11/2022
+Description: Program for calculating the tax in a annual rent.
 */
-
-
-//Libreria  para manejo de entradas y salidas.
 #include <iostream>
 
 using namespace std;
-
 int main(){
     
-    //declare variables
-    float Tax;
-    float AnnualRent;
+    float PagoExtra, PagoInicial;
    
-    // introduce the rent account 
-    cout << " What is your AnnualRent: " << endl;
-    cin >> AnnualRent;
+    cout << " What is your rent per year?\n ";
+    cin >> PagoInicial;
     
-
-    // the variables are validated by the functions 
-    if (AnnualRent < 10000)
-    {
-        Tax =.05;
+    if (PagoInicial < 10000){
+        PagoExtra =.05;
     }
-    else if (AnnualRent >= 10000 & AnnualRent <20000 )
-    {
-        Tax = .15;
+    else if (PagoInicial >= 10000 & PagoInicial <20000 ){
+        PagoExtra = .15;
     }
-    else if (AnnualRent >= 20000 & AnnualRent <35000)
-    {
-        Tax = .20;
+    else if (PagoInicial >= 20000 & PagoInicial <35000){
+        PagoExtra = .20;
     }
-    else if (AnnualRent >= 35000 & AnnualRent < 60000)
-    {
-        Tax = .30;
+    else if (PagoInicial >= 35000 & PagoInicial < 60000){
+        PagoExtra = .30;
     }
-    else if (AnnualRent >= 60000 )
-    {
-        Tax = .45;
+    else if (PagoInicial >= 60000 ){
+        PagoExtra = .45;
     }
     
-      // you can see the results in this part 
-    cout << "your Annual Tax is : " << (Tax*100) << "%" << endl;
-    cout << "your AnnualRent with Tax is : " << (AnnualRent*Tax) << endl;
+    cout << "Your tax fee is : " << (PagoExtra*100) << "%" << endl << "The total amount of rent should be : " << (PagoInicial*PagoExtra) << endl;
 
     return 0;
 }

@@ -1,35 +1,29 @@
 /*
-
-Escribir un programa para una empresa que tiene salas de juegos para todas las edades y
-quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. El
-programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si
-el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar $5 y
-si es mayor de 18 años, $10
-
+Author: Karlo Antonio Ordaz de Vierna
+Date: 5/11/2022
+Description: Program for calculating entry price based on age.
 */
-
 
 #include <iostream>
 using namespace std;
 
 int main(){
-    int edad,PrecioEntrada;
-
-    cout << " How old are you ? " << endl;      
+    int edad,precio;
+    cout << " How old are you ? \n";      
     cin >> edad;
 
-    if ((edad == 1 || edad <4))
+    if ((edad == 1 || edad <4))//If the kid has less then 3 years, free entry
     {
-        cout << "You enter free congratulations !! " << endl;
+        precio = 0;
     }   
-    else if (edad >= 4 && edad < 18)
+    else if (edad >= 4 && edad < 18)//If the kid has less than 18, $5
     {
-        cout << "You have to pay $5 dollars " <<endl;
+        precio = 5;
     }
-    else
+    else//If the client has more than 18, $10
     {
-        cout << "You have to pay $10 dollars " <<endl;
+        precio = 10;
     }               
-
+    cout << "Your entry price is: $" << precio << " thanks for visiting us!\n";
     return 0;
 }

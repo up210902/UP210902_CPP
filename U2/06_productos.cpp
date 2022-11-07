@@ -1,42 +1,36 @@
 /*
-Ejercicio 6.
-Realizar un programa que lea indefinidamente cantidades de productos y su price, y al final
-indique el total de la factura. Para saber que se ha terminado con la compra, se deberá
-ingresar un 0 en la amount
+Author: Karlo Antonio Ordaz de Vierna
+Date: 5/11/2022
+Description: Check sales.
 */
 
 #include <iostream>
 using namespace std;
 
-int main(){
+int main()
+{
 
-    int price = 0; 
-    int amount = 0;
-    int amount_total = 0;
-    
+    int precio = 0;
+    int cantidad = 0;
+    int montototal = 0;
     do
     {
-        cout << "introduce your amount of products" << endl ;
-        cin >> amount;
-        
-        if (amount !=0 & amount >0)
+        cout << "How many products did you sell\n";
+        cin >> cantidad;
+        if (cantidad > 0)
         {
-            cout << "introduce the price of products" << endl;
-            cin >> price;
-
+            cout << "Price of each product individually\n";
+            cin >> precio;
         }
-        else {
-            cout << "tu amount dont exist" << endl;
-
+        else
+        {
+            cout << "Invalid amount\n";
         }
-            
+        montototal += precio * cantidad;
 
-        amount_total += price*amount;
+    } while (cantidad != 0); // End loop if the amount is 0
 
+    cout << "Congratulations, you earned : $" << montototal;
 
-    } while (amount !=0);
-    
-    cout << "your amount total to pay is  : " << amount_total ;
-    
     return 0;
 }

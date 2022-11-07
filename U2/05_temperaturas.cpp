@@ -1,7 +1,7 @@
 /*
-Hacer un programa en el que se ingresen 6 temperaturas y determine el promedio, la mas
-baja y la mas alta
-
+Author: Karlo Antonio Ordaz de Vierna
+Date: 5/11/2022
+Description: Program for calculating temperatura averages.
 */
 
 
@@ -9,31 +9,27 @@ baja y la mas alta
 using namespace std;
 
 int main(){
-    float temperature;
-    int contator = 1;
-    float tempeAcum = 0;
-    int temperature_min = 9999, temperature_max = -9999;
+    float temperatura, Temperaturaacumulada = 0;
+    int contador = 1, temperaturaminima = 9999, temperaturamaxima = -9999;//Iniciamos la temepratura minima muy alta y la maxima muy baja para que el primer numero que meta el usuario tome el nuevo valor
 
     do
     {
-        cout << "give me the temperature" << endl;
-        cin >> temperature;
-        tempeAcum +=temperature;
-
-        contator ++;
-        if (temperature <= temperature_min)
+        cout << "Whats the temperatura?\n";
+        cin >> temperatura;
+        Temperaturaacumulada +=temperatura;
+        contador ++;
+        if (temperatura <= temperaturaminima)//Checar si la temperatura ingresada es menor a la minima
         {
-            temperature_min=temperature;
+            temperaturaminima=temperatura;//Reemplazar
         }
-        if (temperature >= temperature_max)
+        if (temperatura >= temperaturamaxima)//Checar si la temperatura ingresada es mayor a la maxima
         {
-            temperature_max=temperature;
+            temperaturamaxima=temperatura;//Reemplazar
         }
-    } while (contator <=6);
-    
-    cout << "the average of temperature today is : " << tempeAcum/6 <<endl;
-    cout << "the temperature min is " << temperature_min<< endl;
-    cout << "the temperature max is " << temperature_max << endl;
+    } while (contador <=6);
+    cout << "Average temperature: " << Temperaturaacumulada/6 <<"\n";
+    cout << "Minium temperature: " << temperaturaminima<< "\n";
+    cout << "Maxium temperature: " << temperaturamaxima << "\n";
 
 
     return 0;

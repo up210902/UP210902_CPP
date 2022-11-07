@@ -2,77 +2,41 @@
 
 <div align = "center">
 
-# MAIN
+# UNIT 2.- Contro structures and Cycles
 
-# EXCERSICE 1.- RENTA 
-
-<div>
-
-<div align= "justify">
-
-## What is the purpose of this program? well, the program was made with a simple instruction
-
-## This instruction is:
-    The tax brackets for the declaration of income
-    in a given country are the following:
-
-    Tax rate income
-    Less than $10,000 5%
-    Between $10,000 and $20,000 15%
-    Between $20,000 and $35,000 20%
-    Between $35,000 and $60,000 30%
-    More than $60,000 45%
-
-    Write a program that asks the user for their rent
-    annual and shows on the screen the tax rate that
-    corresponds
-
-<div>
-
-<div align = "center">
+# EXCERSICE 1.- RENT 
 
 # INPUT
-<div>
 
-<div align = "justify">
+</div>
 
 ```c++
-                        // introduce the rent account 
-    cout << " What is your AnnualRent: " << endl;
-    cin >> AnnualRent;
+    cout << " What is your rent per year?\n ";
+    cin >> PagoInicial;
     
 ```
 <div>
 
-<div align = "center">
 
-# PROCCESS
+# PROCESS
 <div>
 
-<div align = "justify">
 
 ```c++
-                // the variables are validated by the functions 
-    if (AnnualRent < 10000)
-    {
-        Tax =.05;
+    if (PagoInicial < 10000){
+        PagoExtra =.05;
     }
-    else if (AnnualRent >= 10000 & AnnualRent <20000 )
-    {
-        Tax = .15;
+    else if (PagoInicial >= 10000 & PagoInicial <20000 ){
+        PagoExtra = .15;
     }
-    else if (AnnualRent >= 20000 & AnnualRent <35000)
-    {
-        Tax = .20;
+    else if (PagoInicial >= 20000 & PagoInicial <35000){
+        PagoExtra = .20;
     }
-    else if (AnnualRent >= 35000 & AnnualRent < 60000)
-    {
-        Tax = .30;
+    else if (PagoInicial >= 35000 & PagoInicial < 60000){
+        PagoExtra = .30;
     }
-    else if (AnnualRent >= 60000 )
-    {    {
-
-        Tax = .45;
+    else if (PagoInicial >= 60000 ){
+        PagoExtra = .45;
     }
     
 ```
@@ -88,9 +52,8 @@
 <div align = "justify">
 
 ```c++    
-                    // you can see the results in this part 
-    cout << "your Annual Tax is : " << (Tax*100) << "%" << endl;
-    cout << "your AnnualRent with Tax is : " << (AnnualRent*Tax) << endl;
+    cout << "Your tax fee is : " << (PagoExtra*100) << "%" << endl << "The total amount of rent should be : " << (PagoInicial*PagoExtra) << endl;
+
 
 ```
 <div>
@@ -102,25 +65,19 @@
 
 <div align = "justify">
 
->1. Ask the user for his annual rent.
->2. Check that the user entered a valid rent.   
->2.1 If the user does not enter a valid rent, print a message that the  user entered an incorrect number.  
->2.2 If the user entered a valid rent, continue with the program.
->3.  Check by several if's which tax rate.  
->3.1 If the rent is less than $10, 000 it is 5% (.05).  
->3.2 If the rent is greater than or equal to $10,000 and less than $20,000 it is 15% (.15).  
->3.3 If the rent is greater or equal to $20,000 and less than $35,000, it is 20% (.20).   
->3.4 If the rent is greater or equal to $35,000 and less than $60,000 it is 30% (.30).  
->3.5 If the rent is greater than $60,000 it is 45% (.45). 
->4. Multiply the rent by the tax rate.
->5. Print the tax rate and its equivalent in dollars. 
+This program is for calculating taxes based on rent given by the user:  
+Rent   &ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; Extra  
+ -$10,000 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;	5%  
+ +$10,000  -$20,000 &ensp;	15%  
+ +$20,000 -$35,000	&ensp;&ensp;20%  
+ +$35,000 -$60,000&ensp;&ensp;	30%  
+ +$60,000	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;45%  
 
 <div>
 
 <div align = "center" >
 
-# Texts
-<div>
+# TESTS<div>
 
 <div align = "justify">
 
@@ -141,72 +98,48 @@
 
 <div align= right>
 
-[BACK TO HEAD](#MAIN)
 
 <div align = "center">
 
-# Exercise 2: SCORE PERFORMANCE[](#Exercise2)
-<div>
-
-<div align= "justify">
-
-## What is the purpose of this program? well, the program was made with a simple instruction
-
-## This instruction is:
-    In a certain company, its employees are evaluated at the end of each year.
-    The points that can be obtained in the evaluation start at 0.0 and can go up, translating into better benefits. 
-    The points you can get employees can be 0.0, 0.4, 0.6 or more, but not intermediate values between the figures mentioned. Below is a table with thelevels corresponding to each score. The amount of money earned
-    on each level is $2,400 multiplied by the level score.
-
-    Level Score
-    Unacceptable 0.0
-    Acceptable 0.4
-    Merit 0.6 or more
-
-    Write a program that reads the user's score and indicates their level of performance,
-    as well as the amount of money the user will receive.
-    *Thank you very much for choosing us! We look forward to serving you again.
-
+# Exercise 2: WORK PERFORMANCE
 <div>
 
 
 <div align = "center">
 
 # INPUT
-<div>
-
-<div align = "justify">
+</div>
+</div></div></div>
 
 ```c++
-                        // introduce your score 
-    cout << "introduce your score"<< endl;
-    cin >> score;
-    performance = score*2400;
+    cout << "How well has the employee behaved:\n";
+    cin >> desempeno;
 ```
 <div>
 
 <div align = "center">
 
-# PROCCESS
-<div>
+# PROCESS
+</div>
 
-<div align = "justify">
 
 ```c++
-                // the variables are validated by the functions 
-    if (score == 0.0)
+    dineroextra = desempeno*2400;//Cantidad inicial de dinero
+    
+    if (desempeno == 0.0)
     {
-        cout << "your performance are unacceptable" << endl; 
+        cout << "An unacceptable performance\n"; 
+        cout << "Your extra money is  " << dineroextra; 
     }
-    else if (((score==0.4)||(score >= 0.6))&&(score <=1))
+    else if ((desempeno >= 0.6) && (desempeno <=1))
     {
-        if ((score >= 0.6) && (score <=1))
-    {
-        cout << "your performance are meritorious" << endl;  
-    } else{
-        cout << "your performance are acceptable" << endl;
-        
-    }
+        cout << "A meritorous performance\n";  
+        cout << "Your extra money is  " << dineroextra; 
+    } else if (desempeno == 0.4){
+        cout << "An acceptable performance\n";
+        cout << "Your extra money is  " << dineroextra; 
+    }else{
+        cout << "Invalid performance, try again.";
     }
 ```
 
@@ -215,14 +148,11 @@
 <div align = "center" >
 
 # OUTPUT 
-<div>
+</div>
 
-
-<div align = "justify">
 
 ```c++    
-                    // you can see the results in this part 
-     cout << "your performance (money) is to  " << performance; 
+        cout << "Your extra money is  " << dineroextra; 
 
 ```
 <div>
@@ -234,22 +164,13 @@
 
 <div align = "justify">
 
->1. Ask the user for his score.
->2. Check that the user entered a score greater than or equal to 0.6 or equal to 0.4..   
->2.1 If the user does not enter a valid score print Your score is unacceptable message. ---------
->2.2 If the user entered a valid score, continue with the program.
->3. Multiply your score by 2400 and store the cash value.
->4. Check what kind of score you obtained  
->4.1 If your score is greater than or equal to 0.6 print your score is Meritorious.  
->4.2 If your score is equal to 0.4 print your score is Acceptable.
->5. Print the amount of money.
+The program is for calculating how much extra money should employees get based on their performance. $2400 is the optimal amount and it gets modified by the employee score. It can't receive values between 0-0.4 and 0.4-0.6.
 
 <div>
 
 <div align = "center" >
 
-# Texts
-<div>
+# TESTS<div>
 
 <div align="justify">
 
@@ -261,20 +182,10 @@
 
 ### C) score == 0
 <img src="../imagenes/score0.png" align="center" height="150" width="700"/>
+<br /><br /><br /><br />
+<div align = "center" >
 
-
-# Exercise 3: A program that asks for your age and print the cost of ticked.[](#Exercise3)
-
-## What is the purpose of this program? well, the program was made with a simple instruction
-
-## This instruction is:
-    Write a program for a company that has game rooms for all ages and
-    you want to automatically calculate the price you should charge your customers to enter. The
-    The program must ask the user for the customer's age and display the price of the ticket. Yes
-    the client is under 4 years old can enter for free, if he is between 4 and 18 years old he must pay $5 and
-    if you are over 18, $10
-<div>
-
+# Exercise 3: Entry cost
 
 <div align = "center">
 
@@ -284,29 +195,31 @@
 <div align = "justify">
 
 ```c++
-                        // introduce your score 
-    cout << " How old are you ? " << endl;      
+    cout << " How old are you ? \n";      
     cin >> edad;
 ```
 <div>
 
 <div align = "center">
 
-# PROCCESS
+# PROCESS
 <div>
 
 <div align = "justify">
 
 ```c++
-                // the variables are validated by the functions 
-    if ((edad == 1 || edad <4))
+    if ((edad == 1 || edad <4))//If the kid has less then 3 years, free entry
     {
-        cout << "You enter free congratulations !! " << endl;
+        precio = 0;
     }   
-    else if (edad >= 4 && edad < 18)
+    else if (edad >= 4 && edad < 18)//If the kid has less than 18, $5
     {
-        cout << "You have to pay $5 dollars " <<endl;
+        precio = 5;
     }
+    else//If the client has more than 18, $10
+    {
+        precio = 10;
+    }               
 ```
 <div>
 
@@ -318,11 +231,8 @@
 <div align = "justify">
 
 ```c++    
-                    // you can see the results in this part 
-     else
-    {
-        cout << "You have to pay $10 dollars " <<endl;
-    }    
+    cout << "Your entry price is: $" << precio << " thanks for visiting us!\n";
+
 ```
 <div>
 
@@ -333,19 +243,13 @@
 
 <div align = "justify">
 
->1. Ask the user for your age.
->2. Check that the user enters an age within the following range.  
->2.1 If the user enters an age lower than 0, a message "Your age is invalid" will be printed.  
->2.2 If the user enters a number between 4 and 0, the ticket price is 0.  
->2.3 If the user enters an age greater than 4 and less than 18, the ticket price is 5.  
->2.4 If the user enters an age greater than 18, the ticket price is 10.
->3. Print ticket cost.   
+The program asks the user their age. If they're under 4 years old, the price is 0; if they are under 18 y/o, they pay $5. If they are over 18 years old they pay $10.
 
 <div>
 
 <div align = "center">
 
-## Texts.
+## TESTS
 <div>
 
 <div align = "justify">
@@ -362,26 +266,9 @@
 
 <div align="right">
 
-</div>
+</div><br /><br /><br /><br />
 
-# Exercise 4: Menu of a Bella Napoli pizzeria showing your type of pizza and ingredients[](#Exercise4)
-
-## What is the purpose of this program? well, the program was made with a simple instruction
-
-## This instruction is:
-    The Bella Napoli pizzeria offers vegetarian and non-vegetarian pizzas to its customers. The
-    Ingredients for each type of pizza are listed below.
-
-     Vegetarian ingredients: Pepper and tofu.
-     Non-vegetarian ingredients: Pepperoni, Ham and Salmon.
-
-    Write a program that asks the user if he wants a vegetarian pizza or not, and in
-    Based on your answer, show you a menu with the ingredients available for you to choose from.
-    You can only choose one ingredient besides the mozzarella and the tomato that are in all the
-    pizza.
-    At the end it should be shown on the screen if the chosen pizza is vegetarian or not and all the
-    ingredients it carries
-<div>
+# Exercise 4: Vegetarian or Meat Pizza
 
 
 <div align = "center">
@@ -392,76 +279,38 @@
 <div align = "justify">
 
 ```c++
-                        // introduce your score 
-    cout << "Welcome to Pizzas Bella Napoli" << endl << "What pizza do  you like? Vegetarian or Not vegetarian" << endl;
-    cout << "if you choose the vegetarian pizza enter number 1" << endl << "if you choose the not vegetarian pizza enter number 2" << endl;
-    cin >> type;
+    cout << "Do you want a Vegetarian pizza(V) or a carnivore pizza(C)? (V/C)\n";
+    cin >> response;
 ```
 <div>
 
 <div align = "center">
 
-# PROCCESS
+# PROCESS
 <div>
 
 <div align = "justify">
 
 ```c++
-                // the variables are validated by the functions 
-     if (type == 1)
+    if (response == 'V' || response == 'C') // La respuesta es valida si o no
     {
-        type_1 = "vegetarian";
-        cout << "All include mozarella and tomato."<< endl;
-        cout << "The ingredients are: \n";
-        cout << "1.-Pepper. \n";
-        cout << "2.-Tofu. \n";
-        cout << "choose the number do you like in your pizza" << endl;
-        cin >> vegetarian_ingredient;
-
-        //choose ingredient pepper
-
-        if (vegetarian_ingredient == 1)
+        if (response == 'V') // Vegetarianas
         {
-            ingredient_extra = "pepper";
-        }   
-        //choose tofu
-        else if (vegetarian_ingredient == 2)
+            do
+            {
+                cout << "Extra ingredient: \n 1. Pepper\n 2. Tofu\n"; // Dowhile hasta ingrediente correcto
+                cin >> ingrediente;
+            } while (ingrediente < 1 || ingrediente > 2);
+        } else if (response == 'C') // Carnivoras
         {
-            ingredient_extra = "tofu";
-        }
-   }
-    else if (type == 2)
-    {
-        type_2="no vegetarian";
-        cout << "All include mozarella and tomato."<< endl;
-        cout << "The ingredients are: \n";
-        cout << "1.-Pepperoni. \n";
-        cout << "2.-Ham. \n";
-        cout << "3.- Salmon. \n";           
-        cout << "choose the number do you like in your pizza" << endl;
-        cin >> novegetarian_ingredient;
-
-        //choose ingredient pepperoni
-
-        if (novegetarian_ingredient == 1)
-        {
-            ingredient_extra = "pepperoni";
-        }   
-        //choose ingredient ham
-        else if (novegetarian_ingredient == 2)
-        {
-            ingredient_extra = "ham";
-        }
-        //choose ingredient salmon
-        else if (novegetarian_ingredient == 3)
-        {
-            ingredient_extra = "salmon";
-        }
-   }
-    else
-    {
-        cout << "your type of pizza dont exist" << endl;
-    }
+            do
+            {
+                cout << "Extra ingredient: \n 1. Pepperoni\n 2. Ham\n 3. Salmon\n"; // Dowhile hasta ingrediente correcto
+                cin >> ingrediente;
+            } while (ingrediente < 1 || ingrediente > 3);
+            iniciaen = 1;  // Lugar de ingredientes de carne
+            seleccion = 1; // Mostrar que la pizza es de carne
+        } 
 ```
 <div>
 
@@ -473,17 +322,13 @@
 <div align = "justify">
 
 ```c++    
-                    // you can see the results in this part 
-     if (type == 1 )
-    {   
-        cout << "Your type of pizza is " << type_1 << endl;
-        cout << "Your ingredients of pizza are " << ingredient_extra << ", mozarella and tomato. \n";
+        cout << "Your " << tipopizza[seleccion] << " pizza has the following ingredients:\n Mozarella \n Tomato\n ";
+        cout << ingredienteextra[ingrediente + iniciaen] << endl; // Ingrediente extra
     }
     else
     {
-        cout << "Your type of pizza is " << type_2 << endl;
-        cout << "Your ingredients of pizza are " << ingredient_extra << ", mozarella and tomato. \n";
-    }  
+        cout << "You've inputted an invalid response, try again\n";
+    }
 ```
 <div>
 
@@ -494,20 +339,13 @@
 
 <div align ="justify">
 
->1. Ask the user what type of pizza he/she prefers:  
-1.1 If any number but 1 or 2 is selected it prints "That type of pizza doesn't exit".   
-1.2 If he selects 1 he enters the vegetarian ingredients menu.  
-1.3 If he selects 2 he enters the no vegetarian ingredients menu. 
->2. Display the menu depending on your type of pizza.
->3. Ask what ingredients you want on your pizza.
->4. Save the ingredients in a string.
->5. Show your type of pizza (vegetarian or non-vegetarian) and the ingredients.
+The program asks the user about what kind of pizza they would like: VEGETARIAN or MEAT PIZZA. Based on their decision they can choose one extra ingredient: Pepper or tofu if vegetarian, Pepperoni, salmon and ham if meat pizza. The program then enlists the final ingredient selection alongside the type of pizza.
 
 <div>
 
 <div align = "center">
 
-## Texts.
+## TESTS
 <div>
 
 <div align= "justify">
@@ -533,9 +371,9 @@
 
 
 
-</div>
+</div><br /><br /><br /><br />
 
-# Exercise 5 Ask the user 6 temperature and print the mean, highest and lowest temperature.[](#Exercise5)
+# Exercise 5 Average, minium and maxium of 6 temperatures
 
 <div align = "center">
 
@@ -545,35 +383,30 @@
 <div align = "justify">
 
 ```c++
-                        // introduce your score 
-    do
-    {
-        cout << "give me the temperature" << endl;
-        cin >> temperature;
-        tempeAcum +=temperature;
-
-        contator ++;
+        cout << "Whats the temperatura?\n";
+        cin >> temperatura;
 ```
 <div>
 
 <div align = "center">
 
-# PROCCESS
+# PROCESS
 <div>
 
 <div align = "justify">
 
 ```c++
-                // the variables are validated by the functions 
-     if (temperature <= temperature_min)
+        Temperaturaacumulada +=temperatura;
+        contador ++;
+        if (temperatura <= temperaturaminima)//Checar si la temperatura ingresada es menor a la minima
         {
-            temperature_min=temperature;
+            temperaturaminima=temperatura;//Reemplazar
         }
-        if (temperature >= temperature_max)
+        if (temperatura >= temperaturamaxima)//Checar si la temperatura ingresada es mayor a la maxima
         {
-            temperature_max=temperature;
+            temperaturamaxima=temperatura;//Reemplazar
         }
-    } while (contator <=6);
+    } while (contador <=6);
 ```
 <div>
 
@@ -585,10 +418,9 @@
 <div align = "justify">
 
 ```c++    
-                    // you can see the results in this part 
-    cout << "the average of temperature today is : " << tempeAcum/6 <<endl;
-    cout << "the temperature min is " << temperature_min<< endl;
-    cout << "the temperature max is " << temperature_max << endl;
+    cout << "Average temperature: " << Temperaturaacumulada/6 <<"\n";
+    cout << "Minium temperature: " << temperaturaminima<< "\n";
+    cout << "Maxium temperature: " << temperaturamaxima << "\n";
 ```
 <div>
 
@@ -599,15 +431,12 @@
 
 <div align="justify">
 
->1. Ask the user 6 temperature.
->2. If temparures is higher than the previous one, it save it.
->3. If temparures is lower than the previous one, it save it.
->4. Print the mean, highest and lower temperature.
+Ask 6 temperatures to the user, calculate the average, the minium and the maxium temperature values inputted.
 <div>
 
 <div align="center">
 
-## Texts.
+## TESTS
 <div>
 
 
@@ -617,7 +446,7 @@
 
 </div>
 
-# Exercise 6: Ask the user indefinitely the amount and price of the products, finally print the total price.
+# Exercise 6: Sales by the user. Exit when amount of products sold is 0.
 
 <div align = "center">
 
@@ -627,39 +456,31 @@
 <div align = "justify">
 
 ```c++
-                        // introduce your score 
-    do
-    {
-        cout << "introduce your amount of products" << endl ;
-        cin >> amount;
+        cout << "How many products did you sell\n";
+        cin >> cantidad;
 ```
 <div>
 
 <div align = "center">
 
-# PROCCESS
+# PROCESS
 <div>
 
 <div align = "justify">
 
 ```c++
-                // the variables are validated by the functions 
-     if (amount !=0 & amount >0)
+        if (cantidad > 0)
         {
-            cout << "introduce the price of products" << endl;
-            cin >> price;
-
+            cout << "Price of each product individually\n";
+            cin >> precio;
         }
-        else {
-            cout << "tu amount dont exist" << endl;
-
+        else
+        {
+            cout << "Invalid amount\n";
         }
-            
+        montototal += precio * cantidad;
 
-        amount_total += price*amount;
-
-
-    } while (amount !=0);
+    } while (cantidad != 0); // End loop if the amount is 0
 ```
 <div>
 
@@ -671,8 +492,7 @@
 <div align = "justify">
 
 ```c++    
-                    // you can see the results in this part 
-        cout << "your amount total to pay is  : " << amount_total;
+    cout << "Congratulations, you earned : $" << montototal;
 ```
 <div>
 
@@ -683,15 +503,12 @@
 
 <div align="justify">
 
->1. Ask the user the amount. 
->2. Ask the user the price.
->3. If the user enter 0 in amount, exit the cycle.
->4. Print the total price of all products.
+The program calculates the total amount of sales by the user. It asks for amount and price of each product individually. If the amount equals 0, exit the program.<br />
 <div>
 
 <div align="center">
 
-## Texts.
+## TESTS
 <div>
 
 <img src="../imagenes/amount.png" align="center" height="200" width="500"/>  
@@ -699,7 +516,7 @@
 
 <div align="right">
 
-</div>
+</div><br /><br /><br /><br />
 
 # Exercise 7: Decimal to Binary
 <div align = "center">
@@ -710,31 +527,26 @@
 <div align = "justify">
 
 ```c++
-                        // introduce your score 
-    // Ask the number
-   cout << "Enter the number: ";
-   cin >> numero;    
+    cout << "Enter the number: ";
+    cin >> numero;
 ```
 <div>
 
 <div align = "center">
 
-# PROCCESS
+# PROCESS
 <div>
 
 <div align = "justify">
 
 ```c++
-                // the variables are validated by the functions 
-      // Cycle to divide the number by 2 and print the ramainder.
-   while (numero != 0)
-   {
-       // resultado=to_string(numero%2)+resultado;
-       resultado = (numero % 2 == 0) ? "0" + resultado : "1" + resultado;
-       numero /= 2;
-   }
-   // Print the binary number
-   cout << "The number in binary is " << resultado << endl;  
+    if (numero > 0)
+    {
+        while (numero != 0)
+        {
+            resultado = (numero % 2 == 0) ? "0" + resultado : "1" + resultado;
+            numero /= 2;
+        }
 ```
 <div>
 
@@ -746,11 +558,16 @@
 <div align = "justify">
 
 ```c++    
-                    // you can see the results in this part 
-         // if (numero >= 0) Print the binary number
-    cout << "The number in binary is " << resultado << endl;
-    // if (numero < 0 ) Print the error message.
-    cout << "Only accept numbers greater then or equal to 0. \n";
+        cout << "The number in binary is " << resultado << endl;
+    }
+    else if (numero == 0)
+    {
+        cout << "The number in binary is 0 \n";
+    }
+    else
+    {
+        cout << "Invalid number \n";
+    }
 ```
 <div>
 
@@ -758,29 +575,22 @@
 
 ## EXPLANATION
 <div>
-
->1. Ask the number.
->2. If the number greater than or equal 0.  
->2.1 Enter a cycle to divide the number by 2 and print the ramainer.
->3. If the number less than 0.  
->3.1 Print the error message.
+The program transforms a decimal number to binary through the use of strings and residues in a division.
 
 <div align = "center">
 
-## Texts.
+## TESTS
 <div>
 
-### Number >= 0
 <img src="../imagenes/4.png" align="center" height="100" width="600"/>
 
-### Number < 0
 <img src="../imagenes/-2.png" align="center" height="100" width="600"/>
 
 <div align="center">
 
 </div>
 
-# Exercise 8: Multiplication tables
+# Exercise 8: Product table
 
 <div align = "center"> 
 
@@ -790,71 +600,29 @@
  <div align = "justify">
 
  ```c++
-    // Ask the user for the number
-   cout << "enter the number you want to multiply" << endl;
-    cin >> numero1;
+    cout << "Number to multiply\n"; // Numero a multiplicar X * 1, X * 2,...
+    cin >> multiplicador;
 
-    cout << "enter the number of times you want to multiply it" << endl;
-    cin >> numero2;
+    cout << "How many times do you wish to multiply is\n";
+    cin >> numerodeveces; // Cuantas veces multiplicar el numero
 ```
  <div align = "center">
 
-# PROCCESS
+# PROCESS
 <div>
 
  <div align = "justify">
 
  ```c++
-    if (numero < 0)
+    for (int i = 1; i <= numerodeveces; i++)
     {
-        for (int i = 0; i >= limite; i--)
+
+        for (int j = 0; j <= 41; j++)
         {
-            // If and for to print the firts line of -
-            if (i == 0)
-            {
-                for (int f = 0; f <= 41; f++)
-                {
-                    cout << "-";
-                }
-                cout << "\n";
-            }
-
-            // Print the formatted table.
-            cout << "|  " << i << "\t x \t" << numero << "\t = \t" << (i * numero) << "\t |\n";
-
-            // For to print line of -
-            for (int f = 0; f <= 41; f++)
-            {
-                cout << "-";
-            }
-            cout << "\n";
+            cout << "-";
         }
+        cout << "\t\n";
     }
-    else
-    {
-        for (int i = 0; i <= limite; i++)
-        {
-            // If and for to print the firts line of -
-            if (i == 0)
-            {
-                for (int f = 0; f <= 41; f++)
-                {
-                    cout << "-";
-                }
-                cout << "\n";
-            }
-
-            // Print the formatted table.
-            cout << "|  " << i << "\t x \t" << numero << "\t = \t" << (i * numero) << "\t |\n";
-
-            // For to print line of -
-            for (int f = 0; f <= 41; f++)
-            {
-                cout << "-";
-            }
-            cout << "\n";
-        }
-    } 
 ```
 <div>
 
@@ -866,23 +634,7 @@
  <div align = "justify">
 
 ```c++
-    if (i == 0)
-    {
-        for (int f = 0; f <= 41; f++)
-        {
-            cout << "-";
-        }
-        cout << "\n";
-    }
-    // Print the formatted table.
-    cout << "|  " << i << "\t x \t" << numero << "\t = \t" << (i * numero) << "\t |\n";
-        
-    // For to print line of -
-    for (int f = 0; f <= 41; f++)
-    {
-    cout << "-";
-    }
-    cout << "\n";
+        cout << "| " << multiplicador << "\t X \t" << i << "\t = \t" << multiplicador * i << "\t |\n";//Tabla
 ```
 <div>
 
@@ -893,14 +645,12 @@
 
  <div align = "justify">
 
->1. Ask the user for the number. 
->2. Ask the user for the limit
->3. Print the  multiplication table up to the limit number entered.
+The program asks for a number to multiply by in a form of escalation (X*1,X*2,X*3,X*4,...). It then prints out everything in a table format
 <div>
 
 <div align = "center">
 
-## Texts.
+## TESTS
 <div>
 
 ### Positive number and positive limit
@@ -909,4 +659,94 @@
 ### Negative number and negative number
 <img src="../imagenes/-1.png" align="center" height="500" width="600"/>
 
+<br /><br /><br /><br /><br /><br />
 
+# Exercise 9: Bisection Method
+
+<div align = "center"> 
+
+# INPUT
+ <div>
+
+ <div align = "justify">
+
+ ```c++
+    cout << "FORMULA x²+x-12 \n";
+    cout << "GIVE ME A";
+    cin >> a;
+    cout << "GIVE ME B";
+    cin >> b;
+```
+ <div align = "center">
+
+# PROCESS
+<div>
+
+ <div align = "justify">
+
+ ```c++
+    ya = biseccion(a);//Usar una fucnion float para calcular la biseccion en a,b,c
+    yb = biseccion(b);
+    yc = biseccion(c);
+    if ((yb * ya < 0) || (ya * yc < 0) || (yc * yb < 0)){//Primero checar si hay raiz entre los numeros
+    cout << "| Repetition # \t|\t A \t\t|\t B\t\t|\t C \t\t|\t f(A) \t\t\t|\t f(B) \t\t\t|\t f(C) \t\t| \n";//Encabezado
+    lineas();
+    cout << "| \t" << contador << "\t|\t" << fixed << setprecision(3) << a << "\t\t|\t" << b << "\t\t|\t" << c << "\t\t|\t" << ya << "\t\t\t|\t" << yb << "\t\t\t|\t" << yc << "\t\t|\n"; //First data before anything
+    lineas();
+
+        while (yc >= 0.01 || yc <= -0.01)
+        {
+            if ((yc > 0 && ya < 0) || (ya > 0 && yc < 0))//B ahora actua como C para que se vaya cortando a la mitad
+            {
+                b = c;
+            }
+            else
+            {
+                a = c;
+            }
+            if (a == b)//Si es igual que b salte del loop
+            {
+                break;
+            }
+            
+            c = (a+b)/2;
+            ya = biseccion(a);
+            yb = biseccion(b);
+            yc = biseccion(c);
+            contador++;
+            cout << "| \t" << contador << "\t|\t" << fixed << setprecision(3)/* Para no imprimir tantos decimales*/ << a << "\t\t|\t" << b << "\t\t|\t" << c << "\t\t|\t" << ya << "\t\t\t|\t" << yb << "\t\t\t|\t" << yc << "\t\t|\n";
+            lineas();
+        }
+```
+<div>
+
+ <div align = "center">
+
+# OUTPUT
+<div>
+
+ <div align = "justify">
+
+```c++
+    cout << "The root is approximately " << setprecision(1) <<  c;
+    }
+    else //No hay raiz
+    {
+        cout << "There's no root between the numbers";
+    }
+```
+<div>
+
+ <div align = "center">
+
+## EXPLANATION
+<div>
+
+ <div align = "justify">
+
+The program calculates the root in a graph using the bisections method which basically involves cutting each section of a graph in half(while a number is negative and the other positive) until the halves meet in a point where they are both the same.
+<div>
+
+<div align = "center">
+
+## TESTS

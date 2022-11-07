@@ -1,31 +1,32 @@
+/*
+Author: Karlo Antonio Ordaz de Vierna
+Date: 5/11/2022
+Description: Program for extra payment for good employees.
+*/
 #include <iostream>
 using namespace std;
 
 int main(){
-    double score;
-    double performance;
+    double desempeno, dineroextra;
 
-    cout << "introduce your score"<< endl;
-    cin >> score;
-    performance = score*2400;
+    cout << "How well has the employee behaved:\n";
+    cin >> desempeno;
+    dineroextra = desempeno*2400;//Cantidad inicial de dinero
     
-
-    //evaluar funciones para puntuacion 
-
-    if (score == 0.0)
+    if (desempeno == 0.0)
     {
-        cout << "your performance are unacceptable" << endl; 
+        cout << "An unacceptable performance\n"; 
+        cout << "Your extra money is  " << dineroextra; 
     }
-    else if (((score==0.4)||(score >= 0.6))&&(score <=1))
+    else if ((desempeno >= 0.6) && (desempeno <=1))
     {
-        if ((score >= 0.6) && (score <=1))
-    {
-        cout << "your performance are meritorious" << endl;  
-    } else{
-        cout << "your performance are acceptable" << endl;
-        
+        cout << "A meritorous performance\n";  
+        cout << "Your extra money is  " << dineroextra; 
+    } else if (desempeno == 0.4){
+        cout << "An acceptable performance\n";
+        cout << "Your extra money is  " << dineroextra; 
+    }else{
+        cout << "Invalid performance, try again.";
     }
-    }
-    cout << "your performance (money) is to  " << performance; 
     return 0;
 }
