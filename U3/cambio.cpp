@@ -1,54 +1,106 @@
-#include <iostream>
-
-// Use of namespace to avoid std::
+#include<iostream>
+#include<ctime>
+#include<windows.h>
 using namespace std;
-
-void getcambio(int);
-void getmonedas(int);
-void printmoney(int);
-
-int quinientos = 0, docientos = 0, cien = 0, cincuenta = 0, veinte = 0, diez = 0, cinco = 0, dos = 0, uno = 0;
+void gotoxy(short x, short y);
+void ShowBar();
+void LoadBar();
 
 int main(){
-   int dinero;
-
-   cout << "Enter the money: ";
-   cin >> dinero;
-   
-   getcambio(dinero);
-   printmoney(dinero);
-   
-   return 0;
+ ShowBar();
+ system("pause>null");
+ return 0;    
 }
 
-void getcambio(int dinero)
-{
-   do{
-      // : else 
-      // ? si se cumple la condicion 
-     ((dinero - 500) >= 0) ? quinientos++, dinero -= 500 
-      : ((dinero - 200) >= 0) ? docientos++, dinero -= 200 
-         : ((dinero - 100) >= 0) ? cien++, dinero -= 100 
-            : ((dinero - 50) >= 0) ? cincuenta++, dinero -= 50 
-               : ((dinero - 20) >= 0) ? veinte++, dinero -= 20 
-                  : ((dinero - 10) >= 0) ? diez++, dinero -= 10 
-                     : ((dinero - 5) >= 0) ? cinco++, dinero -= 5 
-                        : ((dinero - 2) >= 0) ? dos++, dinero -= 2 
-                           : ((dinero - 1) >= 0) ? uno++, dinero -= 1 
-                              : uno;
-   } while (dinero > 0);
+void ShowBar(){
+ int x,m=4;
+ char h=201;
+ char j=186;
+ char k=200;
+ char l=205;
+ char v=187;
+ char b=188;
+ system("cls");
+ gotoxy (3,9);cout<<h;
+ gotoxy (3,10);cout<<j;
+ gotoxy (3,11);cout<<k;
+ for(x=0;x<72;x++){
+  gotoxy (m,9);cout<<l;
+  gotoxy (m,11);cout<<l;
+  m++;
+ }
+ gotoxy (m,9);cout<<v;
+ gotoxy (m,10);cout<<j;
+ gotoxy (m,11);cout<<j;
+ gotoxy (m,11);cout<<b;
+ /////////////////////////////////////////////////////////////////
+ gotoxy (29,4);cout<<h;
+ gotoxy (29,5);cout<<j;
+ gotoxy (29,6);cout<<k;
+ m=30;
+ for(x=0;x<15;x++){
+  gotoxy (m,4);cout<<l;
+  gotoxy (m,6);cout<<l;
+  m++;
+ }
+ gotoxy (45,4);cout<<v;
+ gotoxy (45,5);cout<<j;
+ gotoxy (45,6);cout<<b;
+ LoadBar();
 }
+////////////////////////////////////////////
+void LoadBar(){
+ int i, n=4,j,m;
+ char z=178;
+ double porcentaje={1.45};
+ float sum=0;
+ srand (time (NULL));
+ m=rand()%2;
+ system("color 13");
+ system("title Cargando...");
+ gotoxy (30,5);cout<<"Cargando...";
+ Sleep(200);
+ for(i=15;i<=84;i++){
+  n++;
 
-void printmoney(int dinero)
-{
-   cout << "El cambio de $" << dinero << " es: \n";
-   cout << "Billete de $500: " << quinientos << endl;
-   cout << "Billete de $200: " << docientos << endl;
-   cout << "Billete de $100: " << cien << endl;
-   cout << "Billete de $50: " << cincuenta << endl;
-   cout << "Billete de $20: " << veinte << endl;
-   cout << "Moneda de $10: " << diez << endl;
-   cout << "Moneda de $5: " << cinco << endl;
-   cout << "Moneda de $2: " << dos << endl;
-   cout << "Moneda de $1: " << uno << endl;
+  gotoxy (n,10); cout<<z;
+  Sleep(20);
+  gotoxy (38,5);cout<<".     "; 
+  Sleep(25);
+  gotoxy (38,5);cout<<"..";
+  Sleep(25);
+  gotoxy (38,5);cout<<"...";
+  Sleep(25);
+  gotoxy (38,5);cout<<"....";
+  Sleep(25);
+  gotoxy (38,5);cout<<".....";
+  gotoxy (35,10);cout<<sum<<"%";
+  if(i==40){
+   if(m==0){
+    for(j=0;j<=10;j++){
+     Sleep(20);
+     gotoxy (38,5);cout<<".     "; 
+     Sleep(25);
+     gotoxy (38,5);cout<<"..";
+     Sleep(25);
+     gotoxy (38,5);cout<<"...";
+     Sleep(25);
+     gotoxy (38,5);cout<<"....";
+     Sleep(25);
+     gotoxy (38,5);cout<<".....";
+    }
+   }
+  }
+  sum+=porcentaje;
+ }
+ gotoxy (35,10);cout<<"100.00"<<"%";
+}
+//////////////////////////////////////////////////
+// funcion gotoxy
+void gotoxy(short x, short y) {
+ HANDLE hConsoleOutput;
+ COORD Cursor_Pos = {x, y};
+
+ hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+ SetConsoleCursorPosition(hConsoleOutput, Cursor_Pos);
 }
